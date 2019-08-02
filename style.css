@@ -1,6 +1,6 @@
 body {
   margin: 4em 4em 4em 4em;
-  background: #b6b7b9;
+  background: #f6ece7;
 }
 h1 {
   font-size: 50px;
@@ -8,6 +8,8 @@ h1 {
   margin-top: 0.5em;
   font-weight: 400;
   font-family: 'Radiance', Verdana;
+  font-variant: all-small-caps;
+  color: #26251d;
 }
 h2 {
   font-size: 25px;
