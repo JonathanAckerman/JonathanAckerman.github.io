@@ -30,7 +30,7 @@ h4 {
   font-size: 20px;
   margin-top: 1em;
   margin-left: 52.5px;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
   padding: 0.1em 0;
   font-family: 'Roboto', sans-serif;
 }
@@ -55,18 +55,18 @@ h4 {
 }
 p {
   font-size: 15px;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   margin-left: 90px;
-  line-height: 140%;
+  line-height: 100%;
   cursor: text;
   font-family: 'Roboto', sans-serif;
   max-width: 80%;
 }
 iframe {
   margin-bottom: 0.5em;
-  margin-top: 0.5em;
+  margin-top: 1em;
   margin-left: 90px;
-  line-height: 140%;
+  line-height: 100%;
 }
 a {
   text-decoration: none;
