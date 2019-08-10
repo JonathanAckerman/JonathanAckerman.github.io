@@ -16,22 +16,30 @@
   <link rel="stylesheet" type="text/css" href="/style.css">
 
   <script>
+    document.addEventListener("DOMContentLoaded", PopulateList);
+    document.addEventListener("DOMContentLoaded", SetTargets);
     // Get list of links (from file?)
     
     // Create link elements and add to the document
-    var listElem = document.createElement('li');
-    var link = document.createElement('a');
-    link.setAttribute('href', 'test');
-    listElem.appendChild(link);
-    var list = document.getElementById('list');
-    list.appendChild(listElem);
+    function PopulateList() 
+    {
+      var listElem = document.createElement('li');
+      var link = document.createElement('a');
+      link.setAttribute('href', 'test');
+      listElem.appendChild(link);
+      var list = document.getElementById('list');
+      list.appendChild(listElem);
+    }
     
     // Set links to open in new tab
-    var links = document.getElementsByTagName('a');
-    var len = links.length;
-    for(var i=0; i<len; i++)
+    function SetTargets()
     {
-      links[i].target = "_blank";
+      var links = document.getElementsByTagName('a');
+      var len = links.length;
+      for(var i=0; i<len; i++)
+      {
+        links[i].target = "_blank";
+      }
     }
   </script>
 </head>
