@@ -15,7 +15,18 @@
   <!-- style.css -->
   <link rel="stylesheet" type="text/css" href="/style.css">
 
-	<script>
+  <script>
+    // Get list of links (from file?)
+    
+    // Create link elements and add to the document
+    var listElem = document.createElement('li');
+    var link = document.createElement('a');
+    link.setAttribute('href', 'test');
+    listElem.appendChild(link);
+    var list = document.getElementById('list');
+    list.appendChild(listElem);
+    
+    // Set links to open in new tab
     var links = document.getElementsByTagName('a');
     var len = links.length;
     for(var i=0; i<len; i++)
@@ -26,7 +37,7 @@
 </head>
 <body>
   <h1>Dump</h1>
-  <ol>
+  <ol id="list">
     <li>
       <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1073r2.html">test</a>
     </li>
