@@ -78,13 +78,15 @@ iframe {
 }
 a {
   text-decoration: none;
+  color: #2442ff;
 }
 a:hover {
   text-decoration: underline;
-}
-a, a:hover, a:visited {
-  color: #2442ff;
   cursor: pointer;
+}
+a:visited {
+  color: #23aeff;
+  /*color: #192eb3;*/
 }
 em {
   font-weight: bold;
