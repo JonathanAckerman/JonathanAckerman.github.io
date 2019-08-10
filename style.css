@@ -90,10 +90,16 @@ em {
   font-weight: bold;
 }
 ol {
-  list-style: ;
+  list-style-type:decimal;
   margin: 0 0 0 18px;
   padding: 0;
 }
 li {
-  margin-bottom: 22px;
+  font-size: 15px;
+  margin-bottom: 1em;
+  margin-left: 90px;
+  line-height: 100%;
+  cursor: text;
+  font-family: 'Roboto', sans-serif;
+  max-width: 80%;
 }
