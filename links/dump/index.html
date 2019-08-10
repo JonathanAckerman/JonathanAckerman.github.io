@@ -23,10 +23,16 @@
     // Create link elements and add to the document
     function PopulateList() 
     {
-      var listElem = document.createElement('li');
+
+      var url = "https://www.google.com";
+
       var link = document.createElement('a');
-      link.setAttribute('href', 'test');
+      link.setAttribute('href', url);
+      link.innerText(url);
+      
+      var listElem = document.createElement('li');
       listElem.appendChild(link);
+      
       var list = document.getElementById('list');
       list.appendChild(listElem);
     }
