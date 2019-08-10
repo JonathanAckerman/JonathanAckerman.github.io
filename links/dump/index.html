@@ -2,7 +2,7 @@
 <head>
   <link rel="shortcut icon" type="image/jpg" href="/favicon.jpg"/>
   
-  <title>JA::links::dump</title>
+  <title>JA :: links :: dump</title>
   
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
       list.appendChild(listElem);
     }
     
-    // Set links to open in new tab
+    // Set links to open in new tab and style their list number
     function SetTargets()
     {
       var links = document.getElementsByTagName('a');
@@ -47,13 +47,8 @@
       for(var i=0; i<len; i++)
       {
         links[i].target = "_blank";
-        links[i].addEventListener("click", function() { StyleLI(links[i].parentNode) } );
+        links[i].addEventListener("click", function() { links[i].parentNode.style.color = "#66634D" } );
       }
-    }
-    
-    function StyleLI(aListElement)
-    {
-      aListElement.style.color = "#66634D";
     }
   </script>
 </head>
