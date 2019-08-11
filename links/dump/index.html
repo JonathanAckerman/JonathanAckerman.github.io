@@ -29,23 +29,42 @@
         })
         .then(function(str) {
           var lines = str.split("\n");
-          var len = lines.length;
-          for (var i = 0; i < len; ++i)
+          var title = "";
+          for (var i = 0; i < lines.length; ++i)
           {
-            if (lines[i].length > 0 && !lines[i].startsWith("//"))
+            // Ignore empty lines and comments, reset title
+            if (lines[i] == "\n" || lines[i].startsWith("//"))
             {
-              CreateListItem(lines[i]);
+              title = "";
+            }
+            else if (lines[i].startsWith("http://") || lines[i].startsWith("https://"))
+            {
+              // No title set
+              if (title == "")
+              {
+                CreateListItem(lines[i], lines[i]);
+              }
+              // Title set
+              else
+              {
+                CreateListItem(lines[i], title);
+              }
+            }
+            // Treat the line as a title
+            else
+            {
+              title = lines[i];
             }
           }
         });
     }
     
     // Create link elements and add to the document
-    function CreateListItem(url) 
+    function CreateListItem(url, text) 
     {
       var link = document.createElement('a');
       link.setAttribute('href', url);
-      link.innerText = url;
+      link.innerText = text;
       
       var listElem = document.createElement('li');
       listElem.className = "listItem";
