@@ -17,19 +17,22 @@
 
   <!-- Loading Links -->
   <script>
-    document.addEventListener("DOMContentLoaded", PopulateList);
+    document.addEventListener("DOMContentLoaded", BuildList);
     document.addEventListener("DOMContentLoaded", SetTargets);
     // Get list of links
-    var file = "https://pragmapack.com/links/dump/list.txt";
-    $.get(file, function(txt) 
+    function BuildList()
     {
-      var links = txt.responseText.split("\n");
-      var len = links.length;
-      for (int i = 0; i < len; ++i) 
+      var file = "https://pragmapack.com/links/dump/list.txt";
+      $.get(file, function(txt) 
       {
-        PopulateList(links[i]);
-      }
-    }); 
+        var links = txt.responseText.split("\n");
+        var len = links.length;
+        for (int i = 0; i < len; ++i) 
+        {
+          PopulateList(links[i]);
+        }
+      });
+    }
     
     // Create link elements and add to the document
     function PopulateList(url) 
