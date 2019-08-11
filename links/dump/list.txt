@@ -1,1 +1,6 @@
-http://www.zachtronics.com
+http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1073r2.html
+https://patents.google.com/patent/US20050272492A1/en?assignee=Valve+Corporation&country=US&status=APPLICATION&language=ENGLISH&type=PATENT&page=2
+https://patents.google.com/patent/US20050248570A1/en?assignee=Valve+Corporation&country=US&status=APPLICATION&language=ENGLISH&type=PATENT&page=2
+https://patents.google.com/patent/US20050250579A1/en?assignee=Valve+Corporation&country=US&status=APPLICATION&language=ENGLISH&type=PATENT&page=4
+https://patents.google.com/patent/US20050256895A1/en?assignee=Valve+Corporation&country=US&status=APPLICATION&language=ENGLISH&type=PATENT&page=5
+https://patents.google.com/patent/US7696995B2/en?assignee=Valve+Corporation&country=US&language=ENGLISH&sort=new&page=10
