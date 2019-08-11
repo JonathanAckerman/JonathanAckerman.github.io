@@ -32,7 +32,10 @@
           var len = lines.length;
           for (var i = 0; i < len; ++i)
           {
-            CreateListItem(lines[i]);  
+            if (lines[i].length > 0)
+            {
+              CreateListItem(lines[i]);
+            }
           }
         });
     }
@@ -76,18 +79,6 @@
 <body>
   <h1>Dump</h1>
   <ol id="list">
-    <li class="listItem">
-      <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1073r2.html">test</a>
-    </li>
-    <li class="listItem">
-      <a href="pragmapack.com/links/dump">test2</a>
-    </li>
-    <li class="listItem">
-      <a href="google.com">test3</a>
-    </li>
-    <li class="listItem">
-      <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1073r2.html">test4</a>
-    </li>
   </ol>
 </body>
 </html>
