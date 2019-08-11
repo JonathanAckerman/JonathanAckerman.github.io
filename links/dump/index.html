@@ -17,11 +17,10 @@
 
   <!-- Loading Links -->
   <script>
-    var LinkStrings = [];
     document.addEventListener("DOMContentLoaded", PopulateList);
     document.addEventListener("DOMContentLoaded", SetTargets);
     // Get list of links
-    var file = "/list.txt";
+    var file = "https://pragmapack.com/links/dump/list.txt";
     $.get(file, function(txt) 
     {
       var links = txt.responseText.split("\n");
