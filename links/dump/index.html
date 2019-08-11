@@ -23,14 +23,17 @@
     function BuildList()
     {
       var file = new Request("http://pragmapack.com/links/dump/list.txt");
-      fetch(file).then(function(response) 
-      {
-        var lines = response.text().split("\n");
-        for (int i = 0; i < lines.length; ++i)
-        {
-          CreateListItem(lines[i]);
-        }
-      });
+      fetch(file)
+        .then(function(response) { 
+          return response.text(); 
+        })
+        .then(function(str) {
+          var lines = str.split("\n");
+          for (int i = 0; i < lines.length; ++i)
+          {
+            CreateListItem(lines[i]);  
+          }
+        });
     }
     
     // Create link elements and add to the document
