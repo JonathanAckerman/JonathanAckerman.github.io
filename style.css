@@ -93,7 +93,6 @@ ol {
   list-style-type:decimal;
   margin: 1em 0 0 1em;
   padding: 0;
-  max-width: 800px;
 }
 li {
   font-size: 20px;
@@ -102,7 +101,6 @@ li {
   line-height: 100%;
   cursor: text;
   font-family: 'Roboto', sans-serif;
-  max-width: 80%;
   color: #26251d;
 }
 span {
