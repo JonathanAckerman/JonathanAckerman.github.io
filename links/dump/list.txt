@@ -1,6 +1,18 @@
+C++ consteval: Immediate Functions
 http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1073r2.html
+
+Valve Patent: synchronizing a game system with a physics system
 https://patents.google.com/patent/US20050272492A1/en?assignee=Valve+Corporation&country=US&status=APPLICATION&language=ENGLISH&type=PATENT&page=2
+
+Valve Patent: performing speculative collisions for a video game
 https://patents.google.com/patent/US20050248570A1/en?assignee=Valve+Corporation&country=US&status=APPLICATION&language=ENGLISH&type=PATENT&page=2
+
+Valve Patent: generating eyes for a character in a virtual environment
 https://patents.google.com/patent/US20050250579A1/en?assignee=Valve+Corporation&country=US&status=APPLICATION&language=ENGLISH&type=PATENT&page=4
+
+Valve Patent: serialization of hierarchically defined objects
 https://patents.google.com/patent/US20050256895A1/en?assignee=Valve+Corporation&country=US&status=APPLICATION&language=ENGLISH&type=PATENT&page=5
+
+Valve Patent: displaying the effects of light illumination on a surface
 https://patents.google.com/patent/US7696995B2/en?assignee=Valve+Corporation&country=US&language=ENGLISH&sort=new&page=10
+
