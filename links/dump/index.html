@@ -16,27 +16,25 @@
   <link rel="stylesheet" type="text/css" href="/style.css">
 
   <!-- Loading Links -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", BuildList);
     document.addEventListener("DOMContentLoaded", SetTargets);
     // Get list of links
     function BuildList()
     {
-      var file = "https://pragmapack.com/links/dump/list.txt";
-      $.get(file, function(txt) 
+      var file = new Request("http://pragmapack.com/links/dump/list.txt");
+      fetch(file).then(function(response) 
       {
-        var links = txt.responseText.split("\n");
-        var len = links.length;
-        for (int i = 0; i < len; ++i) 
+        var lines = response.text().split("\n");
+        for (int i = 0; i < lines.length; ++i)
         {
-          PopulateList(links[i]);
+          CreateListItem(lines[i]);
         }
       });
     }
     
     // Create link elements and add to the document
-    function PopulateList(url) 
+    function CreateListItem(url) 
     {
       var link = document.createElement('a');
       link.setAttribute('href', url);
