@@ -42,13 +42,14 @@
     // Set links to open in new tab and style their list number
     function SetTargets()
     {
-      var links = document.getElementsByTagName('a');
-      var len = links.length;
-      for(var i=0; i<len; i++)
-      {
-        links[i].target = "_blank";
-        links[i].addEventListener("click", function() { links[i].parentNode.style.color = "#66634D" } );
-      }
+      var parent = document.getElementById("list");
+      parent.addEventListener("click", function(event) {
+        var clicked = event.target;
+        if (clicked.tagName == "A")
+        {
+          clicked.parentNode.style.color = "#65624E";
+        }
+      });
     }
   </script>
 </head>
