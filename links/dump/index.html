@@ -22,7 +22,7 @@
     // Get list of links
     function BuildList()
     {
-      var file = new Request("https://jonathanackerman.github.io/links/dump/list.txt");
+      var file = new Request("/list.txt");
       fetch(file)
         .then(function(response) { 
           return response.text(); 
