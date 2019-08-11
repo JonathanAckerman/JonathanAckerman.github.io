@@ -67,14 +67,12 @@
       link.innerText = text;
       
       var brief = document.createElement("span");
-      {
-        var begin = text.indexOf('/');
-        text = text.substring(begin + 2);
-        var end = text.indexOf('/');
-        text = text.substring(0, end);
-        text = '('.concat(text, ')');
-        brief.innerText = text;
-      }
+      var begin = text.indexOf('/');
+      text = text.substring(begin + 2);
+      var end = text.indexOf('/');
+      text = text.substring(0, end);
+      text = '('.concat(text, ')');
+      brief.innerText = text;
       
       var listElem = document.createElement('li');
       listElem.className = "listItem";
