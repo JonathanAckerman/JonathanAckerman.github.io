@@ -62,18 +62,21 @@
     // Create link elements and add to the document
     function CreateListItem(url, text) 
     {
+	    console.log("START: " + text);
       var link = document.createElement('a');
       link.setAttribute('href', url);
-      link.innerText = text;
+      link.textContent = text;
       
       var brief = document.createElement("span");
       var begin = text.indexOf('/');
       text = text.substring(begin + 2);
+      console.log("1st ASGN: " + text);
       var end = text.indexOf('/');
       text = text.substring(0, end);
-      alert(text);
+      console.log("2nd ASGN: " + text);
       text = "(" + text + ")";
-      brief.innerText = text;
+      console.log("3rd ASGN: " + text);
+      brief.textContent = text;
       
       var listElem = document.createElement('li');
       listElem.className = "listItem";
@@ -107,7 +110,6 @@
 </head>
 <body>
   <h1>Dump</h1>
-  <ol id="list">
-  </ol>
+  <ol id="list"></ol>
 </body>
 </html>
