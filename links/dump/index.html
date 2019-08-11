@@ -29,7 +29,8 @@
         })
         .then(function(str) {
           var lines = str.split("\n");
-          for (int i = 0; i < lines.length; ++i)
+          var len = lines.length;
+          for (var i = 0; i < len; ++i)
           {
             CreateListItem(lines[i]);  
           }
@@ -56,7 +57,7 @@
     {
       var links = document.getElementsByTagName('a');
       var len = links.length;
-      for(var i=0; i<len; i++)
+      for(var i = 0; i < len; ++i)
       {
         links[i].target = "_blank";
       }
