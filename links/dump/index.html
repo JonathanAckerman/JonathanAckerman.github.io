@@ -17,16 +17,24 @@
 
   <!-- Loading Links -->
   <script>
+    var LinkStrings = [];
     document.addEventListener("DOMContentLoaded", PopulateList);
     document.addEventListener("DOMContentLoaded", SetTargets);
-    // Get list of links (from file?)
+    // Get list of links
+    var file = "/list.txt";
+    $.get(file, function(txt) 
+    {
+      var links = txt.responseText.split("\n");
+      var len = links.length;
+      for (int i = 0; i < len; ++i) 
+      {
+        PopulateList(links[i]);
+      }
+    }); 
     
     // Create link elements and add to the document
-    function PopulateList() 
+    function PopulateList(url) 
     {
-
-      var url = "https://www.google.com";
-
       var link = document.createElement('a');
       link.setAttribute('href', url);
       link.innerText = url;
