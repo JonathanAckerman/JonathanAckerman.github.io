@@ -16,3 +16,21 @@ https://patents.google.com/patent/US20050256895A1/en?assignee=Valve+Corporation&
 Valve Patent: displaying the effects of light illumination on a surface
 https://patents.google.com/patent/US7696995B2/en?assignee=Valve+Corporation&country=US&language=ENGLISH&sort=new&page=10
 
+Neuralink Whitepaper: An integrated brain-machine interface platform with thousands of channels
+https://assets.documentcloud.org/documents/6204648/Neuralink-White-Paper.pdf
+
+Survival in Chessland
+http://tom7.org/chess/survival.pdf
+
+C++ Making std::vector constexpr
+http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1004r1.pdf
+
+Elan Ruskin's Blog
+http://assemblyrequired.crashworks.org
+
+Bruce Dawson's Blog
+https://randomascii.wordpress.com
+
+How Computers Boot Up
+https://manybutfinite.com/post/how-computers-boot-up/
+
