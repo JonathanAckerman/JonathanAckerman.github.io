@@ -60,10 +60,11 @@
               title = lines[i];
             }
           }
-          for (let link in LinksList)
+          for (var [key, value] of LinksMap)
           {
-            console.log(link);
-            CreateListItem(link.url, link.title);
+            console.log(key);
+            console.log(value);
+            CreateListItem(key, value);
           }
         });
     }
