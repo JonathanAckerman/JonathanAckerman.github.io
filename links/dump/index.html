@@ -77,17 +77,17 @@
       link.setAttribute('href', url);
       link.textContent = text;
       
-      
       var brief = document.createElement("span");
-      var begin = text.indexOf('/');
-      text = text.substring(begin + 2);
-      console.log("1st ASGN: " + text);
-      var end = text.indexOf('/');
-      text = text.substring(0, end);
-      console.log("2nd ASGN: " + text);
-      text = "(" + text + ")";
-      console.log("3rd ASGN: " + text);
-      brief.textContent = text;
+      var hostname = url;
+      var begin = hostname.indexOf('/');
+      hostname = hostname.substring(begin + 2);
+      console.log("1st ASGN: " + hostname);
+      var end = hostname.indexOf('/');
+      hostname = hostname.substring(0, end);
+      console.log("2nd ASGN: " + hostname);
+      hostname = "(" + hostname + ")";
+      console.log("3rd ASGN: " + hostname);
+      brief.textContent = hostname;
       
       var listElem = document.createElement('li');
       listElem.className = "listItem";
