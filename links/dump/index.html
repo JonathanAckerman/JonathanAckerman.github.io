@@ -77,7 +77,10 @@
       var begin = hostname.indexOf('/');
       hostname = hostname.substring(begin + 2);
       var end = hostname.indexOf('/');
-      hostname = hostname.substring(0, end);
+	    if (end != -1) 
+      {
+        hostname = hostname.substring(0, end);
+      }
       hostname = "(" + hostname + ")";
       brief.textContent = hostname;
       
