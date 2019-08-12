@@ -19,6 +19,10 @@
   <script>
     document.addEventListener("DOMContentLoaded", BuildList);
     document.addEventListener("DOMContentLoaded", SetTargets);
+    
+    var UniqueLinks = new Set();
+    var LinksList = [];
+    
     // Get list of links
     function BuildList()
     {
@@ -32,29 +36,37 @@
           var title = "";
           for (var i = 0; i < lines.length; ++i)
           {
+            console.log(lines[i]);
             // Ignore empty lines and comments, reset title
             if (lines[i] == "\n" || lines[i].startsWith("//"))
             {
+              console.log("Reset");
               title = "";
             }
             else if (lines[i].startsWith("http://") || lines[i].startsWith("https://"))
             {
-              // No title set
-              if (title == "")
+              if (!UniqueLinks.has(lines[i]))
               {
-                CreateListItem(lines[i], lines[i]);
-              }
-              // Title set
-              else
-              {
-                CreateListItem(lines[i], title);
+                console.log("Unique link");
+                UniqueLinks.add(lines[i]);
+                var obj = new Object();
+                obj.url = lines[i];
+                obj.title = title;
+                LinksList.push(obj);
+                title = "";
               }
             }
             // Treat the line as a title
             else
             {
+              console.log("Set Title");
               title = lines[i];
             }
+          }
+          for (let link in LinksList)
+          {
+            console.log(link);
+            CreateListItem(link.url, link.title);
           }
         });
     }
@@ -62,10 +74,11 @@
     // Create link elements and add to the document
     function CreateListItem(url, text) 
     {
-	    console.log("START: " + text);
+      console.log("START: " + text);
       var link = document.createElement('a');
       link.setAttribute('href', url);
       link.textContent = text;
+      
       
       var brief = document.createElement("span");
       var begin = text.indexOf('/');
