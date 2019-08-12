@@ -21,7 +21,7 @@
     document.addEventListener("DOMContentLoaded", SetTargets);
     
     var UniqueLinks = new Set();
-    var LinksList = [];
+    var LinksMap = new Map();
     
     // Get list of links
     function BuildList()
@@ -49,11 +49,7 @@
               {
                 console.log("Unique link");
                 UniqueLinks.add(lines[i]);
-                var obj = new Object();
-                obj.url = lines[i];
-                obj.title = title;
-                console.log(obj);
-                LinksList.push(obj);
+                LinksMap.set(lines[i], title);
                 title = "";
               }
             }
