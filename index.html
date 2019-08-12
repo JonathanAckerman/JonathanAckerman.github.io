@@ -15,6 +15,13 @@
 	
   <!-- style.css -->
   <link rel="stylesheet" type="text/css" href="/style.css">
+  
+  <script>
+  function PlayVideo() 
+  {
+    document.getElementById("doo-crackie").play();
+  }
+  </script>
 	
 </head>
 <body>
@@ -50,6 +57,12 @@
     <p>A 2D, dexterity-based arcade game where you rotate a polygon to match incoming projectiles to the correct side.</p>
     <p>I built the UI and wrote the math and collision libraries.</p>
     <p>Revolve was my second semester game at Digipen, built using C and an OpenGL wrapper.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/A9K1sNqXqVg?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/A9K1sNqXqVg?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <button onclick="PlayVideo()">
+    <video id="doo-crackie" width="320" height="240" controls>
+      <source src="movie.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </button>
 </body>
 </html>
