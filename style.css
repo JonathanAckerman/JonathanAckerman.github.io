@@ -106,3 +106,6 @@ li {
 span {
   margin-left: 1em;
 }
+input, video {
+  float: right;
+}
