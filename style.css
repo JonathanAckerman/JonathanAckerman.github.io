@@ -1,35 +1,57 @@
 body {
-  margin: 4em 4em 4em 4em;
+  margin: 4vw 4vw 4vw 4vw;
   background: #f9e5da;
 }
+@media screen and (max-width: 500px) {
+  body {
+    margin: 2em 1em 1em 1em;
+  }
+}
+
 h1 {
-  font-size: 70px;
+  font-size: 6vw;
   margin-left: 0;
-  margin-top: 0.5em;
-  font-family: 'Radiance-SemiBold', Verdana;
-  font-variant: all-small-caps;
+  word-spacing: 15px;
+  font-family: 'manrope-bold', Verdana;
   color: #26251d;
 }
+@media screen and (max-width: 500px) {
+  h1 {
+    word-spacing: 5px;
+  }
+}
+
 h2 {
-  font-size: 50px;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  font-size: 3vw;
   margin-left: 10px;
   padding: 0.1em 0;
-  font-family: 'Radiance', Verdana;
-  font-variant: all-small-caps;
+  font-family: 'manrope-regular', Verdana;
   color: #26251d;
 }
+@media screen and (max-width: 500px) {
+  h2 {
+    
+    margin-left: 0;
+  }
+}
+
 h3 {
   font-size: 25px;
   margin-top: 0.85em;
   margin-left: 52.5px;
   margin-bottom: 0.25em;
   padding: 0.1em 0;
-  font-family: 'Roboto', sans-serif;
-  text-decoration: underline dashed;
+  font-family: 'manrope-regular', sans-serif;
+  text-decoration: underline;
   color: #26251d;
 }
+@media screen and (max-width: 860px) {
+  h3 {
+    margin-left: 0;
+    font-size: 15px;
+  }
+}
+
 h4 {
   font-size: 20px;
   margin-top: 1em;
@@ -40,39 +62,81 @@ h4 {
   font-variant: all-small-caps;
   color: #26251d;
 }
+
 #about{
-  font-size: 15px;
-  margin-bottom: 0.5em;
+  font-size: 1.67vw;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
   margin-left: 52.5px;
-  line-height: 140%;
-  cursor: text;
   font-family: 'Roboto', sans-serif;
-  max-width: 80%;
+  max-width: 60vw;
+  display: block;
 }
-#resume {
-  font-size: 20px;
+@media screen and (min-width: 860px) {
+  #about {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 860px) {
+  #about {
+    font-size: 12px;
+    margin-left: 20px;
+  }
+}
+
+#resume, #blog {
+  font-size: 1.6vw;
   margin-bottom: 0.5em;
-  margin-top: 0.5em;
+  margin-top: 1.5em;
   margin-left: 52.5px;
-  line-height: 140%;
   cursor: text;
-  font-family: 'Roboto', sans-serif;
-  max-width: 80%;
+  font-family: 'manrope-light', sans-serif;
+  display: inline;
 }
+@media screen and (max-width: 1200px) {
+  #resume, #blog {
+    font-size: 19px;
+  }
+}
+@media screen and (max-width: 860px) {
+  #resume, #blog {
+    font-size: 15px;
+    margin-left: 20px;
+    padding-bottom: 5px;
+  }
+}
+
 p {
-  font-size: 15px;
+  font-size: 1.67vw;
   margin-bottom: 1em;
   margin-left: 90px;
-  line-height: 100%;
-  cursor: text;
+  line-height: 1.4;
   font-family: 'Roboto', sans-serif;
-  max-width: 80%;
 }
+@media screen and (min-width: 860px) {
+  p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 860px) {
+  p {
+    font-size: 12px;
+    margin-left: 20px;
+  }
+}
+
 iframe {
   margin-bottom: 0.5em;
   margin-top: 1em;
   margin-left: 90px;
   line-height: 100%;
+}
+@media screen and (max-width: 860px) {
+  iframe {
+    width: 300px;
+    height: 169px;
+    margin-left: 0;
+  }
 }
 a {
   text-decoration: none;
@@ -103,9 +167,60 @@ li {
   font-family: 'Roboto', sans-serif;
   color: #26251d;
 }
-span {
-  margin-left: 1em;
+
+#easter-egg { 
+  display: flex;
+  position: relative;
+  left: 0.4vw;
+  bottom: 0.4vw;
 }
-input, video {
-  float: right;
+@media screen and (min-width: 1500px) {
+  #easter-egg {
+    float: right;
+  }
+}
+@media screen and (max-width: 1500px) {
+  #easter-egg {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 500px) {
+  #easter-egg {
+    position: relative;
+    right: 0px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+  }
+}
+
+#easter-egg-button {
+  height: 40px;
+}
+@media screen and (max-width: 1500px) {
+  #easter-egg-button {
+    float: right;
+  }
+}
+@media screen and (max-width: 500px) {
+  #easter-egg-button {
+    height: 20px;
+  }
+}
+
+#easter-egg-video { }
+@media screen and (min-width: 1500px) {
+  #easter-egg-video {
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  #easter-egg-video {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+hr {
+  border-top: 1px solid #26251d;
 }
