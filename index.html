@@ -1,85 +1,93 @@
 <html>
 <head>
-  <link rel="shortcut icon" type="image/png" href="./Logo.png"/>
+    <link rel="shortcut icon" type="image/png" href="./Logo.png"/>
 	
-  <title>Jonathan Ackerman</title>
+    <title>Jonathan Ackerman</title>
 	
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="./radiance.css">
-  <link rel="stylesheet" type="text/css" href="./manrope.css">
-	
-  <!-- reset.css -->
-  <link rel="stylesheet" type="text/css" href="./reset.css">
-	
-  <!-- style.css -->
-  <link rel="stylesheet" type="text/css" href="./style.css">
-  
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  
-  <script>
-    function PlayVideo() 
-    {
-      var vid = document.getElementById("easter-egg-video");
-      vid.style.display = "block";
-      vid.style.float = "right";
-      vid.play();
-      
-      setTimeout(function() { vid.style.display = "none"; }, 6700);
-    }
-  </script>
+    <!-- FONTS -->
+    <!--    Roboto -->          <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <!--    Anonymous Pro -->   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!--    Radiance -->        <link rel="stylesheet" type="text/css" href="./radiance.css">
+    <!--    Manrope -->         <link rel="stylesheet" type="text/css" href="./manrope.css">
+        
+    <!-- reset.css -->
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+        
+    <!-- style.css -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    
+    <script>
+        function PlayVideo() 
+        {
+            var vid = document.getElementById("easter-egg-video");
+            vid.style.display = "block";
+            vid.style.float = "right";
+            vid.play();
+            
+            setTimeout(function() { vid.style.display = "none"; }, 6700);
+        }
+    </script>
 	
 </head>
 <body>
-  <span id="easter-egg">
-    <div>
-      <video id="easter-egg-video" style="display: none;" width="320" height="180">
-        <source src="snakeDoor.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div>
-      <input id="easter-egg-button" type="image" src="doo-crackie.png" onclick="PlayVideo()"></input>
-    </div>
-  </span>
-  <h1>Jonathan Ackerman</h1>
-  <h2>Game Development Software Engineer</h2>
-  <p id="about">I'm a senior at Digipen Institute of Technology working towards a Bachelor of Science in Computer Science. I'm a senior at Digipen Institute of Technology working towards a Bachelor of Science in Computer Science.</p>
-  <p id="resume"><a href="./Resume.pdf" target="_blank">Resume</a></p>
-  <p id="blog"><a href="./blog" target="_blank">Blog</a></p>
-  <hr>
-  <h3>Zachtronics Game Programming Intern (Aug 2019 - Present)</h3>
-    <p>I am currently working as a programming intern at Zachtronics!</p>
-    <p>My job entails working both independently and with the team to define and implement game features.</p>
-    <p>I am also integrating art and building art pipeline tools for gameplay animations.</p>
-  
-  <h3>Rule Database for Contextual Dialog</h3>
-    <p>A contextual dialog system that uses the game state to query what dialog to play, using my previous project <em>Lamb Planet</em> (see below) as a starting point.</p>
-    <p>Based off of <a href="https://steamcdn-a.akamaihd.net/apps/valve/2012/GDC2012_Ruskin_Elan_DynamicDialog.pdf">this presentation</a> by Elan Ruskin</p>
-
-  <h3>Lamb Planet (2017 - 2018)</h3>
-    <p>A 3D, third-person, sailing adventure game where you explore an archipelago, meet the residents, and help solve their problems.</p>
-    <p>I built the dialog system which allowed for branching player choice and a simple writing workflow.</p>
-    <p>Built in our custom C++ engine called <a href="https://github.com/JonathanAckerman/YTE" target="_blank">YTE</a>.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/iTt_W-mqirY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-  <h3>Synesthesia (2015 - 2016)</h3>
-    <p>A 3D, third-person, exploration game where you collect colored birds in order to bring a dead tree back to life.</p>
-    <p>I prototyped game mechanics, built a UI framework, and worked on level design.</p>
-    <p>Built in our custom C++ engine called <a href="https://github.com/JonathanAckerman/YTE" target="_blank">YTE</a>.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZLqbP6n-VfE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-  <h3>Ripple (2014 - 2015)</h3>
-    <p>A 2D, top-down, calm physics game where you play a lantern floating down a river trying to collect flower petals.</p>
-    <p>I wrote gameplay logic, built the UI, and wrote the input system</p>
-    <p>Built in our custom C++ engine called <a href="https://github.com/JonathanAckerman/YTE" target="_blank">YTE</a>.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/gUoXGoufYhE?start=10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-  <h3>Revolve (Spring 2014)</h3>
-    <p>A 2D, dexterity-based arcade game where you rotate a polygon to match incoming projectiles to the correct side.</p>
-    <p>I built the UI and wrote the math and collision libraries.</p>
-    <p>Revolve was my second semester game at Digipen, built using C and an OpenGL wrapper.</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/A9K1sNqXqVg?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div id="page">
+        <div id="head-bio">
+            <span id="easter-egg">
+                <div>
+                    <video id="easter-egg-video" style="display: none;" width="320" height="180">
+                        <source src="snakeDoor.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div>
+                    <input id="easter-egg-button" type="image" src="doo-crackie.png" onclick="PlayVideo()"></input>
+                </div>
+            </span>
+        
+            <h1>Jonathan Ackerman</h1>
+            <h2>Game Development Software Engineer</h2>
+            <p id="about">I'm a senior at Digipen Institute of Technology working towards a Bachelor of Science in Computer Science. I'm a senior at Digipen Institute of Technology working towards a Bachelor of Science in Computer Science.</p>
+            <p id="resume"><a href="./Resume.pdf" class="dark-bkgd" target="_blank">Resumé (PDF)</a></p>
+            <p id="blog"><a href="./blog" class="dark-bkgd">Blog</a></p>
+        </div>
+        
+        <div id="content">
+            <h3>Zachtronics Game Programming Intern (Aug 2019 - Present)</h3>
+            <p>I am currently working as a programming intern at Zachtronics!</p>
+            <p>My job entails working both independently and with the team to define and implement game features.</p>
+            <p>I am also integrating art and building art pipeline tools for gameplay animations.</p>
+            
+            <h3>Rule Database for Contextual Dialog</h3>
+            <p>A contextual dialog system that uses the game state to query what dialog to play, using my previous project <em>Lamb Planet</em> (see below) as a starting point.</p>
+            <p>Based off of <a href="https://steamcdn-a.akamaihd.net/apps/valve/2012/GDC2012_Ruskin_Elan_DynamicDialog.pdf">this presentation</a> by Elan Ruskin</p>
+            
+            <h3>Lamb Planet (2017 - 2018)</h3>
+            <p>A 3D, third-person, sailing adventure game where you explore an archipelago, meet the residents, and help solve their problems.</p>
+            <p>I built the dialog system which allowed for branching player choice and a simple writing workflow.</p>
+            <p>Built in our custom C++ engine called <a href="https://github.com/JonathanAckerman/YTE" target="_blank">YTE</a>.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/iTt_W-mqirY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <h3>Synesthesia (2015 - 2016)</h3>
+            <p>A 3D, third-person, exploration game where you collect colored birds in order to bring a dead tree back to life.</p>
+            <p>I prototyped game mechanics, built a UI framework, and worked on level design.</p>
+            <p>Built in our custom C++ engine called <a href="https://github.com/JonathanAckerman/YTE" target="_blank">YTE</a>.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZLqbP6n-VfE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <h3>Ripple (2014 - 2015)</h3>
+            <p>A 2D, top-down, calm physics game where you play a lantern floating down a river trying to collect flower petals.</p>
+            <p>I wrote gameplay logic, built the UI, and wrote the input system</p>
+            <p>Built in our custom C++ engine called <a href="https://github.com/JonathanAckerman/YTE" target="_blank">YTE</a>.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gUoXGoufYhE?start=10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <h3>Revolve (Spring 2014)</h3>
+            <p>A 2D, dexterity-based arcade game where you rotate a polygon to match incoming projectiles to the correct side.</p>
+            <p>I built the UI and wrote the math and collision libraries.</p>
+            <p>Revolve was my second semester game at Digipen, built using C and an OpenGL wrapper.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/A9K1sNqXqVg?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>      
 </body>
 </html>
