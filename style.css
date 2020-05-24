@@ -148,19 +148,15 @@ h4 {
 
 a {
   text-decoration: underline;
-  color: #E6F8B2;
-  background-color: rgba(37, 36, 29, 0.25);
-  border-radius: 10px;
-  padding-left: 4px;
-  padding-right: 5px;
+  color: #623CEA;
 }
 a:visited {
-  color: #736f57;
+  color: #4B2EB3;
 }
 a:hover {
   text-decoration: underline;
   cursor: pointer;
-  color: #623CEA;
+  color: #9F84FF;
 }
 
 p {
