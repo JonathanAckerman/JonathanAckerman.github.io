@@ -14,7 +14,6 @@ html {
 
 #head-bio {
   padding-top: 3vw;
-  padding-bottom: 2vw;
   padding-left: 52.5px;
   background: #26251d;
 }
@@ -27,6 +26,12 @@ html {
 
 #content {
   background: #f9e5da;
+}
+
+#footer {
+  background: #26251d;
+  margin-top: 2vw;
+  height: 5vw;
 }
 
 h1 {
@@ -92,7 +97,7 @@ h4 {
 }
 
 #about{
-  margin-bottom: 1.5em;
+  margin-bottom: 0;
   margin-top: 1.5em;
   margin-left: 0;
   max-width: 60vw;
@@ -113,25 +118,23 @@ h4 {
   }
 }
 
-#blog {
-  padding-left: 50px;
+a {
+  text-decoration: underline;
+  color: #623CEA;
 }
+a:visited {
+  color: #4B2EB3;
+}
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #9F84FF;
+}
+
 #resume, #blog {
+  text-decoration: none;
   font-size: 1.6vw;
-  margin-bottom: 0.5em;
-  margin-top: 1.5em;
-  margin-left: 0;
-  cursor: text;
   font-family: 'manrope-light', sans-serif;
-  display: inline;
-  
-  background-color: rgba(249, 230, 220, 0.5);
-  border-radius: 25px;
-  padding-left: 4px;
-  padding-right: 5px;
-}
-#resume > .dark-bkgd, #blog > .dark-bkgd {
-  background-color: rgba(0, 0, 0, 0);
 }
 @media screen and (max-width: 1200px) {
   #resume, #blog {
@@ -146,17 +149,23 @@ h4 {
   }
 }
 
-a {
-  text-decoration: underline;
-  color: #623CEA;
+nav {
+  margin-top: 1em;
 }
-a:visited {
-  color: #4B2EB3;
-}
-a:hover {
-  text-decoration: underline;
+button {
   cursor: pointer;
-  color: #9F84FF;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  background-color: #999999;
+  color: #000;
+}
+button:hover {
+  background-color: #000;
+  color: #FFF;
 }
 
 p {
@@ -267,8 +276,4 @@ li {
 @media screen and (max-width: 860px) {
   #easter-egg-video {
     margin-right: 15px;
-}
-
-hr {
-  border-top: 1px solid #26251d;
 }
