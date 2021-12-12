@@ -30,6 +30,18 @@
             
             setTimeout(function() { vid.style.display = "none"; }, 6700);
         }
+        
+        function MakeGif(name, object)
+        {
+            var path = "./img/" + name;
+            object.firstElementChild.src = path;
+        }
+        
+        function MakeJpg(name, object)
+        {
+            var path = "./img/" + name;
+            object.firstElementChild.src = path;
+        }
     </script>
 	
 </head>
@@ -40,7 +52,7 @@
             <td>
                 <div>
                     <video id="easter-egg-video" style="display: none;" width="320" height="180">
-                        <source src="./img/snakeDoor.mp4" type="video/mp4">
+                        <source src="./img/snakeDoor.mp4" type="video/mp4" loading="lazy">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -56,90 +68,82 @@
         <section id="bio">
             <h1>Jonathan Ackerman</h1>
             <h2>Game Development Software Engineer</h2>
-            <p id="about">I believe that great games require great code.
-                <br>In my experience, a game's design is strongest when it leverages the structure of its implementation in code.
+            <div id="about">
+                <p>I believe that great games require great code.</p>
+                <p>In my experience, a game's design is strongest when it leverages the structure of its code.</p>
                 <br>
-                <br>Hi, I'm Jonathan. I'm a software engineer in game development with a focus on gameplay engineering.
-                <br>I finished my Bachelor of Science in Computer Science at Digipen Institute of Technology in 2021.
+                <p>Hi, I'm Jonathan. I'm a software engineer in game development with a focus on gameplay engineering.</p>
+                <p>I finished my Bachelor of Science in Computer Science at Digipen Institute of Technology in 2021.</p>
                 <br>
-                <br><i>"There are deep, worthy challenges everywhere you look"&emsp;&mdash;Michael Abrash</i>
-            </p>
+                <p><i>"There are deep, worthy challenges everywhere you look"&emsp;&mdash; Michael Abrash</i></p>
+            </div>
         </section>
         
         <nav>
             <button onClick="javascript:window.open('Resume.pdf', '_blank');" id="resume">Resumé (PDF)</button>
-            <button onclick="window.location.href='blog';" id="blog">Blog</button>
+            <!--button onClick="window.location.href='blog';" id="blog">Blog</button-->
         </nav>
     </section>
     
     <section id="page">
         <section id="work-experience">
             <h2>Professional Experience</h2>
-            <div class="container">
-                <h3>Zachtronics Game Programming Intern (Aug 2019 - Jan 2020)</h3>
-                <p>I spent 6 months as a game programming intern at <a href="https://www.zachtronics.com/" target="_blank">Zachtronics</a> (<a href="https://en.wikipedia.org/wiki/Zachtronics" target="_blank">wikipedia</a>) where I built gameplay and engine features.</p>
-                <p>Zachtronics is an indie game studio that has been making unique programming puzzle games since 2000. The genre of their games is often called "Zach-Like" due to the consistency and quality of the studio's corpus.</p>
-                <p>My job entailed working both independently and with the team to define and implement game features.</p>
-                <!--<p>I was also responsible for art integration and building art pipeline tools for gameplay animations.</p>-->
+            <h3>Zachtronics &mdash; Game Programming Internship (Aug 2019 - Jan 2020)</h3>
+            <div class="grid-container">
                 <div class="item">
-                    <span class="left">
-                        
-                        <p>Most of my time was spent working on Mobius Front, a 2D top-down tactics game set in the 1980's.</p>
-                        <p>I had ownership of unit art integration. This entailed programming the gameplay animation system, working with the artists to ensure the animations in-game matched their expectations, and building debugging tools to facilitate communication.</p>
-                        <p>I also spent much of my time implementing gameplay logic and unit pathfinding.</p>
-                    </span>
-                    <span class="right">
-                        <iframe width="455" height="256" src="https://www.youtube.com/embed/gqf1V5tCaXM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
-                        <p>I had the unique opportunity to design and build a procedurally generated UI animation in MOLEK-SYNTEZ, a 2D top-down programming puzzle game about synthesizing molecules from atoms.</p>
-                        <br/>
-                        <img src="./img/molek-syntez.gif" width=455/>
-                    </span>
+                    <a href="./links/games/molek.html" onmouseenter="MakeGif('molek-syntez.gif', this)" onmouseleave="MakeJpg('molek-syntez.jpg', this)" style="text-decoration: none;">
+                        <img src="./img/molek-syntez.jpg"><h3 class="caption">MOLEK-SYNTEZ</h3></img>
+                    </a>
                 </div>
-                <div class="reel">
-                    <h3>GIFs:</h3>
+                <div class="item">
+                    <a href="./links/games/mobius.html" onmouseenter="MakeGif('mobius.gif', this)" onmouseleave="MakeJpg('mobius.jpg', this)" style="text-decoration: none;">
+                        <img src="./img/mobius.jpg"><h3 class="caption">Mobius War '83</h3></img>
+                    </a>
                 </div>
             </div>
         </section>
         <hr>
         <section id="projects">
-            <h2>Projects</h2>
-            <div class="container">
+            <h2>Student Projects</h2>
+            <div class="grid-container">
                 <div class="item"> 
-                    <h3>Rule Database for Contextual Dialog (Aug 2018 - Apr 2019)</h3>
-                    <p>A contextual dialog system that uses the game state to query what dialog to play, using my previous project <em>Lamb Planet</em> (see below) as a starting point.</p>
-                    <p>Based off of <a href="https://steamcdn-a.akamaihd.net/apps/valve/2012/GDC2012_Ruskin_Elan_DynamicDialog.pdf" target="_blank">this presentation</a> by Elan Ruskin</p>
+                    <!--div style="background-color: #000; height: 370.125px;"-->
+                        <img src="./img/contextual-dialog.jpg"><h3 class="caption">Contextual Dialog (Aug 2018 - Apr 2019)</h3></img>
+                    <!--/div-->
+                    <p>For my senior year project I wrote a rule-based contextual dialog system that uses the game state to query a database for what dialog to play. I used my previous project</p><p style="padding-top: 0;"><em>Lamb Planet</em> as a starting point.</p>
+                    <p>I was inspired by <a href="https://steamcdn-a.akamaihd.net/apps/valve/2012/GDC2012_Ruskin_Elan_DynamicDialog.pdf" target="_blank">this amazing presentation</a> by Elan Ruskin during his tenure at Valve.</p>
                 </div>
                 
                 <div class="item">
-                    <h3>Lamb Planet (2017 - 2018)</h3>
+                    <iframe width="100%" height="370.125" src="https://www.youtube.com/embed/bHEIVMXUaCI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+                    <h3 class="caption">Lamb Planet (2017 - 2018)</h3>
                     <p>A 3D, third-person, sailing adventure game where you explore an archipelago, meet the residents, and help solve their problems.</p>
                     <p>I built the dialog system which allowed for branching player choice and a simple writing workflow.</p>
-                    <p>Built in our custom C++ engine called <a href="https://github.com/JonathanAckerman/YTE" target="_blank">YTE</a>.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/bHEIVMXUaCI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+                    <p>Built in our team's custom C++ engine called <a href="https://github.com/JonathanAckerman/YTE" target="_blank">YTE</a>.</p>
                 </div>
                 
                 <div class="item">
-                    <h3>Synesthesia (2015 - 2016)</h3>
+                    <iframe width="100%" height="370.125" src="https://www.youtube.com/embed/ZLqbP6n-VfE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+                    <h3 class="caption">Synesthesia (2015 - 2016)</h3>
                     <p>A 3D, third-person, exploration game where you collect colored birds in order to bring a dead tree back to life.</p>
                     <p>I prototyped game mechanics, built a UI framework, and worked on level design.</p>
                     <p>Built in our custom C++ engine called <a href="https://github.com/JonathanAckerman/YTE" target="_blank">YTE</a>.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZLqbP6n-VfE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
                 </div>
                 
                 <div class="item">
-                    <h3>Ripple (2014 - 2015)</h3>
-                    <p>A 2D, top-down, calm physics game where you play a lantern floating down a river trying to collect flower petals.</p>
-                    <p>I wrote gameplay logic, built the UI, and wrote the input system</p>
+                    <iframe width="100%" height="370.125" src="https://www.youtube.com/embed/gUoXGoufYhE?start=10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+                    <h3 class="caption">Ripple (2014 - 2015)</h3>
+                    <p>A relaxing 2D, top-down, physics-based game where you play a lantern floating down a river trying to collect flower petals.</p>
+                    <p>I wrote the gameplay logic, UI, and input system. I also designed game mechanics and levels.</p>
                     <p>Built in our custom C++ engine called <a href="https://github.com/JonathanAckerman/YTE" target="_blank">YTE</a>.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gUoXGoufYhE?start=10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
                 </div>  
                 
                 <div class="item">
-                    <h3>Revolve (Spring 2014)</h3>
+                    <iframe width="100%" height="370.125" src="https://www.youtube.com/embed/A9K1sNqXqVg?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+                    <h3 class="caption">Revolve (Spring 2014)</h3>
                     <p>A 2D, dexterity-based arcade game where you rotate a polygon to match incoming projectiles to the correct side.</p>
-                    <p>I built the UI and wrote the math and collision libraries.</p>
+                    <p>I wrote the UI and physics systems. I also designed the game mechanics.</p>
                     <p>Revolve was my second semester game at Digipen, built using C and an OpenGL wrapper.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/A9K1sNqXqVg?start=25" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
