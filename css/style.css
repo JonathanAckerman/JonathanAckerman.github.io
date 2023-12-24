@@ -197,11 +197,13 @@ p {
     grid-template-columns: 485px 485px;
     grid-column-gap: 30px;
     margin-top: 1em;
+    margin-bottom: -1.5em;
 }
 
 .item {
     width: auto;
     margin-bottom: 2em;
+    margin-top: 0em;
 }
 
 .item:hover .caption {
@@ -215,6 +217,10 @@ p {
 
 .item p {
     padding-top: 16px;
+}
+
+.item h3 {
+    margin-top: -6px;
 }
 
 .caption {
@@ -323,6 +329,21 @@ hr {
     background: #26251d;
     height: 10px;
     padding: 0;
-    margin: 0;
+    margin: 1em 0 -1em 0;
     font-size: 30px;
+}
+
+#back-button {
+    color: #f9e5da; 
+    text-decoration:none;
+}
+#back-button:hover {
+    text-decoration:underline;
+}
+#back-button:visited {
+    color: #f9e5da; 
+    text-decoration:none;
+}
+#back-button:after {
+    text-decoration:none;
 }
