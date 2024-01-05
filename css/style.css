@@ -133,12 +133,20 @@ p a {
 p a:visited {
     color: #35217f;
 }
+#about p a { /* Ignore the visited status for links in my bio since it's hard to read */
+    text-decoration: underline;
+    color: #bfadff;
+}
 p a:hover {
     text-decoration: underline;
     cursor: pointer;
     color: #bfadff;
 }
 p a::after {
+    content: ' \1F865';
+}
+
+#resume::after {
     content: ' \1F865';
 }
 
